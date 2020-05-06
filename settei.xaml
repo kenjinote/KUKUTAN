@@ -1,0 +1,118 @@
+﻿<Page x:Class="KUKUTAN.settei"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:KUKUTAN"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Background="Silver"
+      SizeChanged="savebutton_SizeChanged">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="5*" />
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="0.5*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="0.2*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="0.2*" />
+        </Grid.RowDefinitions>
+
+        <Border Grid.Column="0" Grid.ColumnSpan="5" Grid.Row="0" Grid.RowSpan="2" Background="#FFF0F0F0"/>
+
+        <Viewbox Grid.Column="1" Grid.Row="0" Grid.RowSpan="2">
+            <Label Content="設定" Foreground="Black" VerticalContentAlignment="Center" Padding="0"/>
+        </Viewbox>
+        <Viewbox Grid.Column="2" Grid.Row="1">
+            <Label Content="出題（目標）問題数" Foreground="Black" VerticalContentAlignment="Center" Padding="0"/>
+        </Viewbox>
+        <Viewbox Grid.Column="3" Grid.Row="1">
+            <Label Content="制限時間（秒）" Foreground="Black" VerticalContentAlignment="Center" Padding="0"/>
+        </Viewbox>
+
+        <Viewbox Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left">
+            <Label x:Name="label1" Content="①練習　文字＋数字＋答" Foreground="Black" VerticalContentAlignment="Center" Padding="0"/>
+        </Viewbox>
+        <Viewbox Grid.Column="1" Grid.Row="3" HorizontalAlignment="Left">
+            <Label Content="②練習　文字＋数字（ゆっくり）" Foreground="Black" VerticalContentAlignment="Center" Padding="0"/>
+        </Viewbox>
+        <Viewbox Grid.Column="1" Grid.Row="4" HorizontalAlignment="Left">
+            <Label Content="②練習（普通）" Foreground="Black" VerticalContentAlignment="Center" Padding="0"/>
+        </Viewbox>
+        <Viewbox Grid.Column="1" Grid.Row="5" HorizontalAlignment="Left">
+            <Label Content="②練習（オリジナル）" Foreground="Black" VerticalContentAlignment="Center" Padding="0"/>
+        </Viewbox>
+        <Viewbox Grid.Column="1" Grid.Row="6" HorizontalAlignment="Left">
+            <Label Content="③練習　文字" Foreground="Black" VerticalContentAlignment="Center" Padding="0"/>
+        </Viewbox>
+        <Viewbox Grid.Column="1" Grid.Row="7" HorizontalAlignment="Left">
+            <Label Content="④練習　数字" Foreground="Black" VerticalContentAlignment="Center" Padding="0"/>
+        </Viewbox>
+        <Viewbox Grid.Column="1" Grid.Row="8" HorizontalAlignment="Left">
+            <Label Content="⑤テスト　段ごとのテスト" Foreground="Black" VerticalContentAlignment="Center" Padding="0"/>
+        </Viewbox>
+        <Viewbox Grid.Column="1" Grid.Row="9" HorizontalAlignment="Left">
+            <Label Content="⑥テスト　81問チャレンジ" Foreground="Black" VerticalContentAlignment="Center" Padding="0"/>
+        </Viewbox>
+        <Viewbox Grid.Column="1" Grid.Row="10" HorizontalAlignment="Left">
+            <Label Content="⑦穴埋問題（段ごと）" Foreground="Black" VerticalContentAlignment="Center" Padding="0"/>
+        </Viewbox>
+        <Viewbox Grid.Column="1" Grid.Row="11" HorizontalAlignment="Left">
+            <Label Content="⑦穴埋問題（ランダム）" Foreground="Black" VerticalContentAlignment="Center" Padding="0"/>
+        </Viewbox>
+
+        <TextBox x:Name="textbox1" Grid.Column="2" Grid.Row="2" Text="27" Margin="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="textbox3" Grid.Column="2" Grid.Row="3" Text="27" Margin="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="textbox5" Grid.Column="2" Grid.Row="4" Text="27" Margin="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="textbox7" Grid.Column="2" Grid.Row="5" Text="27" Margin="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="textbox9" Grid.Column="2" Grid.Row="6" Text="27" Margin="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="textbox11" Grid.Column="2" Grid.Row="7" Text="27" Margin="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="textbox13" Grid.Column="2" Grid.Row="8" Text="27" Margin="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="textbox15" Grid.Column="2" Grid.Row="9" Text="81" Margin="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsEnabled="False" />
+        <TextBox x:Name="textbox17" Grid.Column="2" Grid.Row="10" Text="27" Margin="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="textbox19" Grid.Column="2" Grid.Row="11" Text="81" Margin="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+
+        <TextBox x:Name="textbox2" Grid.Column="3" Grid.Row="2" Text="135" Margin="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="textbox4" Grid.Column="3" Grid.Row="3" Text="150" Margin="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="textbox6" Grid.Column="3" Grid.Row="4" Text="120" Margin="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="textbox8" Grid.Column="3" Grid.Row="5" Text="90" Margin="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="textbox10" Grid.Column="3" Grid.Row="6" Text="90" Margin="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="textbox12" Grid.Column="3" Grid.Row="7" Text="90" Margin="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="textbox14" Grid.Column="3" Grid.Row="8" Text="90" Margin="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="textbox16" Grid.Column="3" Grid.Row="9" Text="243" Margin="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="textbox18" Grid.Column="3" Grid.Row="10" Text="90" Margin="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="textbox20" Grid.Column="3" Grid.Row="11" Text="180" Margin="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+
+        <Grid Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="13">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5*" />
+                <ColumnDefinition Width="5*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="5*" />
+                <ColumnDefinition Width="5*" />
+            </Grid.ColumnDefinitions>
+            <Viewbox Grid.Column="1">
+                <Button x:Name="savebutton" Content="設定を保存" Click="savebutton_Click" />
+            </Viewbox>
+            <Viewbox Grid.Column="3">
+                <Button x:Name="backbutton" Content="メニュー画面に戻る" Click="backbutton_Click" />
+            </Viewbox>
+        </Grid>
+    </Grid>
+</Page>
