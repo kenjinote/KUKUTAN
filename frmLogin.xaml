@@ -4,13 +4,13 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="パスワード入力" Height="189" Width="232" ResizeMode="NoResize" Loaded="Window_Loaded">
+        Title="パスワード入力" Height="150" Width="230" ResizeMode="NoResize" Loaded="Window_Loaded">
     <Grid>
-        <Label Content="パスワードを入力してください" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="33.306" Width="205.333"/>
-        <Label Content="パスワード" HorizontalAlignment="Left" Margin="10,48.306,0,0" VerticalAlignment="Top" Height="33.306" Width="92.732"/>
-        <TextBox x:Name="passwordEditBox" HorizontalAlignment="Left" Height="33.306" Margin="107.732,48.306,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="107.601"/>
-        <Button x:Name="Cancel" Content="キャンセル" HorizontalAlignment="Left" Margin="10,113.15,0,0" VerticalAlignment="Top" Width="100" IsCancel="True" Click="Cancel_Click"/>
-        <Button x:Name="OK" Content="OK" HorizontalAlignment="Left" Margin="115,113.15,0,0" VerticalAlignment="Top" Width="100" IsDefault="True" Click="OK_Click"/>
+        <Label Content="パスワードを入力してください" Margin="10,10,10,0" VerticalAlignment="Top" Height="23" Padding="0"/>
+        <Label Content="パスワード" HorizontalAlignment="Left" Margin="10,48.306,0,0" VerticalAlignment="Top" Height="23" Width="92.732" Padding="0"/>
+        <PasswordBox x:Name="passwordEditBox" PasswordChar="*" HorizontalAlignment="Left" Height="23" Margin="107.732,48.306,0,0" VerticalAlignment="Top" Width="107.601"/>
+        <Button x:Name="Cancel" Style="{StaticResource DefaultButton}" Content="キャンセル" HorizontalAlignment="Left" Margin="10,92,0,0" VerticalAlignment="Top" Width="100" IsCancel="True" Click="Cancel_Click"/>
+        <Button x:Name="OK" Style="{StaticResource DefaultButton}" Content="OK" HorizontalAlignment="Left" Margin="115,92,0,0" VerticalAlignment="Top" Width="100" IsDefault="True" Click="OK_Click"/>
 
     </Grid>
 </Window>

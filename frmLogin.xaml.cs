@@ -34,7 +34,7 @@ namespace KUKUTAN
 
         private void OK_Click(object sender, RoutedEventArgs e)
         {
-            if (passwordEditBox.Text != "9999")
+            if (passwordEditBox.Password != "9999")
             {
                 new SoundPlayer(Properties.Resources.BUBU).Play();
                 return;

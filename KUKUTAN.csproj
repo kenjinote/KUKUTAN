@@ -67,9 +67,6 @@
     <Compile Include="FinishPage.xaml.cs">
       <DependentUpon>FinishPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="FlatButton.xaml.cs">
-      <DependentUpon>FlatButton.xaml</DependentUpon>
-    </Compile>
     <Compile Include="frmLogin.xaml.cs">
       <DependentUpon>frmLogin.xaml</DependentUpon>
     </Compile>
@@ -114,10 +111,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="FinishPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="FlatButton.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -193,6 +186,7 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="app.config" />
+    <None Include="kakeyomi.csv" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

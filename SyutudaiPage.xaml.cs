@@ -64,30 +64,30 @@ namespace KUKUTAN
                 )
             {
                 // 未入力のセルに0を入力しようとしたときは入力を無視する
-                if ((e.Key == Key.D0 || e.Key == Key.NumPad0) && input.Content.ToString().Length == 0)
+                if ((e.Key == Key.D0 || e.Key == Key.NumPad0) && text3.Content.ToString().Length == 0)
                 {
                     return;
                 }
                 // 2桁未満のときのみ数値入力を許容する
-                if (input.Content.ToString().Length < 2)
+                if (text3.Content.ToString().Length < 2)
                 {
                     string keyCodeString = e.Key.ToString();
-                    input.Content += keyCodeString[keyCodeString.Length - 1].ToString();
+                    text3.Content += keyCodeString[keyCodeString.Length - 1].ToString();
                 }
             }
             // スペースキー、マイナスキー、バックスペースキー、デリートキーを入力した場合は、セルの入力をクリアする
             else if (e.Key == Key.Space || e.Key == Key.OemMinus || e.Key == Key.Subtract || e.Key == Key.Back || e.Key == Key.Delete)
             {
-                input.Content = "";
+                text3.Content = "";
             }
             // エンターキーを入力した場合は
             else if (e.Key == Key.Enter)
             {
                 // 数字未入力の場合は何もしない
-                if (input.Content.ToString() == "") return;
+                if (text3.Content.ToString() == "") return;
 
                 // 入力値が正解の場合
-                if (input.correct)
+                if (text3.correct)
                 {
                     // 正解の音を鳴らす
                     new SoundPlayer(Properties.Resources.CBC).Play();
@@ -100,7 +100,7 @@ namespace KUKUTAN
                 else
                 {
                     new SoundPlayer(Properties.Resources.BUBU).Play();
-                    input.Content = "";
+                    text3.Content = "";
                 }
             }
         }
@@ -109,6 +109,35 @@ namespace KUKUTAN
         {
             window = Window.GetWindow(this);
             window.KeyDown += HandleKeyDown;
+
+        //Label3.Text = CStr(0) '残り時間
+            Module1.mondai_count = 0;
+            Module1.collect_count = 0; // 正解数
+            Module1.mistake_count = 0; // 不正解数
+            Module1.matigaikaisu = 0;
+
+            switch(Module1.keishiki)
+            {
+                case 0: // もじ+すうじ＋こたえ
+                    Label5.Visibility = Visibility.Visible; // すうじ
+                    break;
+                case 1: // もじ＋すうじ
+                    break;
+                case 2: // もじのみ
+                    break;
+                case 3: // すうじのみ
+                    break;
+                case 4: // 段ごとのテスト
+                    break;
+                case 5: // ８１問テストチャレンジ
+                    break;
+                case 6: // 穴埋
+                    break;
+                case 7: // 実力判定
+                    break;
+                case 8: // ふくしゅうモード
+                    break;
+            }
 
             TimeCount = 0;
             // タイマのインスタンスを生成

@@ -32,54 +32,75 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="5*" />
                 <ColumnDefinition Width="35*" />
-                <ColumnDefinition Width="5*" />
-                <ColumnDefinition Width="5*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="7*" />
+                <ColumnDefinition Width="1*" />
             </Grid.ColumnDefinitions>
 
             <!--<Border>-->
-                <Viewbox Grid.Column="1">
-                <Border Background="#FFFFC080" BorderThickness="1" CornerRadius="5">
-                    <Grid Margin="5">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="1*" />
-                                <ColumnDefinition Width="1*" />
-                                <ColumnDefinition Width="1*" />
-                            </Grid.ColumnDefinitions>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="1*" />
-                                <RowDefinition Height="1*" />
-                                <RowDefinition Height="1*" />
-                                <RowDefinition Height="1*" />
-                                <RowDefinition Height="1*" />
-                            </Grid.RowDefinitions>
-                            <Button Grid.Column="0" Grid.Row="0" Margin="2" Content="　　1の段　　" Click="Button_Click"/>
-                            <Button Grid.Column="0" Grid.Row="1" Margin="2" Content="　　2の段　　" Click="Button_Click"/>
-                            <Button Grid.Column="0" Grid.Row="2" Margin="2" Content="　　3の段　　" Click="Button_Click"/>
-                            <Button Grid.Column="0" Grid.Row="3" Margin="2" Content="　　4の段　　" Click="Button_Click"/>
-                            <Button Grid.Column="0" Grid.Row="4" Margin="2" Content="　　5の段　　" Click="Button_Click"/>
+            <Border Grid.Column="1" Background="#FFFFC080" BorderThickness="1" CornerRadius="5">
+                <Grid Margin="5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                    </Grid.RowDefinitions>
+                    <Viewbox Grid.Column="0" Grid.Row="0">
+                        <Button Margin="2" Content="1の段" Click="Button_Click" Width="75"/>
+                    </Viewbox>
+                    <Viewbox Grid.Column="0" Grid.Row="1">
+                        <Button Margin="2" Content="2の段" Click="Button_Click" Width="75"/>
+                    </Viewbox>
+                    <Viewbox Grid.Column="0" Grid.Row="2">
+                        <Button Margin="2" Content="3の段" Click="Button_Click" Width="75"/>
+                    </Viewbox>
+                    <Viewbox Grid.Column="0" Grid.Row="3">
+                        <Button Margin="2" Content="4の段" Click="Button_Click" Width="75"/>
+                    </Viewbox>
+                    <Viewbox Grid.Column="0" Grid.Row="4">
+                        <Button Margin="2" Content="5の段" Click="Button_Click" Width="75"/>
+                    </Viewbox>
 
-                            <Button Grid.Column="1" Grid.Row="0" Margin="2" Content="　　6の段　　" Click="Button_Click"/>
-                            <Button Grid.Column="1" Grid.Row="1" Margin="2" Content="　　7の段　　" Click="Button_Click"/>
-                            <Button Grid.Column="1" Grid.Row="2" Margin="2" Content="　　8の段　　" Click="Button_Click"/>
-                            <Button Grid.Column="1" Grid.Row="3" Margin="2" Content="　　9の段　　" Click="Button_Click"/>
+                    <Viewbox Grid.Column="1" Grid.Row="0">
+                        <Button Margin="2" Content="6の段" Click="Button_Click" Width="75"/>
+                    </Viewbox>
+                    <Viewbox Grid.Column="1" Grid.Row="1">
+                        <Button Margin="2" Content="7の段" Click="Button_Click" Width="75"/>
+                    </Viewbox>
+                    <Viewbox Grid.Column="1" Grid.Row="2">
+                        <Button Margin="2" Content="8の段" Click="Button_Click" Width="75"/>
+                    </Viewbox>
+                    <Viewbox Grid.Column="1" Grid.Row="3">
+                        <Button Margin="2" Content="9の段" Click="Button_Click" Width="75"/>
+                    </Viewbox>
 
-                            <Button x:Name="anaumebutton" Grid.Column="2" Grid.Row="0" Margin="2" Content="　　あなうめ問題　　" Click="anaumebutton_Click"/>
-                            <Button x:Name="challenge81button" Grid.Column="2" Grid.Row="4" Margin="2" Content="　　81問チャレンジ　　" Click="challenge81button_Click"/>
-                        </Grid>
-                </Border>
-            </Viewbox>
+                    <Viewbox Grid.Column="2" Grid.Row="0">
+                        <Button x:Name="anaumebutton" Margin="2" Content=" あなうめ問題 " Click="anaumebutton_Click"/>
+                    </Viewbox>
+                    <Viewbox Grid.Column="2" Grid.Row="4" >
+                        <Button x:Name="challenge81button" Margin="2" Content=" 81問チャレンジ " Click="challenge81button_Click"/>
+                    </Viewbox>
+                </Grid>
+            </Border>
             <!--</Border>-->
-            <Grid Grid.Column="2">
+            <Grid Grid.Column="3">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="10*" />
                     <RowDefinition Height="10*" />
                     <RowDefinition Height="10*" />
                 </Grid.RowDefinitions>
                 <Viewbox Grid.Row="0">
-                    <Button x:Name="settingsbutton" Content="設定" VerticalAlignment="Top" Click="settingsbutton_Click"/>
+                    <Button x:Name="settingsbutton" Content="設定" VerticalAlignment="Top" Click="settingsbutton_Click" Width="50"/>
                 </Viewbox>
                 <Viewbox Grid.Row="2">
-                    <Button x:Name="exitbutton" Content="終了" VerticalAlignment="Top" Grid.Row="1" Click="exitbutton_Click" IsCancel="True"/>
+                    <Button x:Name="exitbutton" Content="終了" VerticalAlignment="Top" Grid.Row="1" Click="exitbutton_Click" IsCancel="True" Width="40"/>
                 </Viewbox>
             </Grid>
         </Grid>
