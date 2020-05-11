@@ -49,7 +49,7 @@
         public static short syutsudaimondaisu = 0; // 出題問題数設定
         public static object[] hukusyudatami = new object[21];
         public static short[] hukusyudatahou = new short[21]; // ふくしゅうする段の実と法を保存する
-        public static short sokudo = 0; // 0;ゆっくり 1;ふつう 2;オリジナル
+        public static short sokudo = 0; // 0:ゆっくり 1:ふつう 2:オリジナル
         public static short matigaikaisu = 0; // 問題を間違えた回数を記録
         public static bool[] suuzikakunin = new bool[10]; // 使用したすうじを確認
         public static object[] matigaihou = new object[244];

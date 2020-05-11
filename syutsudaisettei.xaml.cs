@@ -32,28 +32,6 @@ namespace KUKUTAN
             }
         }
 
-        //private void Button_Click(object sender, RoutedEventArgs e)
-        //{
-        //    Button button = sender as Button;
-        //    if (button == null)
-        //        return;
-
-        //    if (button.Content.ToString().Contains("②"))
-        //    {
-        //        NavigationService.Navigate(new sokudosettei());
-        //        return;
-        //    }
-        //    if (button.Content.ToString().Contains("⑤"))
-        //    {
-        //        NavigationService.Navigate(new SecondPage());
-        //        return;
-        //    }
-
-
-        //    // 数字文字設定ページに遷移
-        //    NavigationService.Navigate(new zyunzyosettei());            
-        //}
-
         // ①すうじ＋もじ＋こたえ ボタンが押されたとき
         private void button1_Click(object sender, RoutedEventArgs e)
         {

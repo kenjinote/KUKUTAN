@@ -32,13 +32,13 @@
                     <RowDefinition Height="1*" />
                 </Grid.RowDefinitions>
                 <Viewbox Grid.Column="1" Grid.Row="0">
-                    <Button Margin="2" Content="ゆっくり" Click="Button_Click" Width="75"/>
+                    <Button x:Name="button1" Margin="2" Content="ゆっくり" Width="75" Click="button1_Click"/>
                 </Viewbox>
                 <Viewbox Grid.Column="1" Grid.Row="1">
-                    <Button Margin="2" Content="ふつう" Click="Button_Click" Width="75"/>
+                    <Button x:Name="button2" Margin="2" Content="ふつう" Width="75" Click="button2_Click"/>
                 </Viewbox>
                 <Viewbox Grid.Column="1" Grid.Row="2">
-                    <Button Grid.Column="1" Grid.Row="2" Margin="2" Content="オリジナル" Click="Button_Click" Width="75"/>
+                    <Button x:Name="button3" Margin="2" Content="オリジナル" Width="75" Click="button3_Click"/>
                 </Viewbox>
                 <Viewbox Grid.Column="1" Grid.Row="3" HorizontalAlignment="Right">
                     <Button Grid.Column="1" Grid.Row="3" Margin="2" Content="もどる" IsCancel="True" Click="backbutton_Click" Width="50"/>
