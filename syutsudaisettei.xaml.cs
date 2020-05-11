@@ -32,25 +32,71 @@ namespace KUKUTAN
             }
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            Button button = sender as Button;
-            if (button == null)
-                return;
-            if (button.Content.ToString().Contains("②"))
-            {
-                NavigationService.Navigate(new sokudosettei());
-                return;
-            }
-            if (button.Content.ToString().Contains("⑤"))
-            {
-                NavigationService.Navigate(new SecondPage());
-                return;
-            }
+        //private void Button_Click(object sender, RoutedEventArgs e)
+        //{
+        //    Button button = sender as Button;
+        //    if (button == null)
+        //        return;
 
+        //    if (button.Content.ToString().Contains("②"))
+        //    {
+        //        NavigationService.Navigate(new sokudosettei());
+        //        return;
+        //    }
+        //    if (button.Content.ToString().Contains("⑤"))
+        //    {
+        //        NavigationService.Navigate(new SecondPage());
+        //        return;
+        //    }
+
+
+        //    // 数字文字設定ページに遷移
+        //    NavigationService.Navigate(new zyunzyosettei());            
+        //}
+
+        // ①すうじ＋もじ＋こたえ ボタンが押されたとき
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            Module1.keishiki = 0; // すうじ＋もじ＋こたえ
 
             // 数字文字設定ページに遷移
-            NavigationService.Navigate(new zyunzyosettei());            
+            NavigationService.Navigate(new zyunzyosettei());
+        }
+
+        // ②すうじ＋もじ ボタンが押されたとき
+        private void button2_Click(object sender, RoutedEventArgs e)
+        {
+            Module1.keishiki = 1; // すうじ＋もじ
+
+            // 速度設定画面へ遷移
+            NavigationService.Navigate(new sokudosettei());
+        }
+
+        // ③もじのみ ボタンが押されたとき
+        private void button3_Click(object sender, RoutedEventArgs e)
+        {
+            Module1.keishiki = 2; // もじのみ
+
+            // 数字文字設定ページに遷移
+            NavigationService.Navigate(new zyunzyosettei());
+        }
+
+        // ④すうじのみ ボタンが押されたとき
+        private void button4_Click(object sender, RoutedEventArgs e)
+        {
+            Module1.keishiki = 3; // すうじのみ
+
+            // 数字文字設定ページに遷移
+            NavigationService.Navigate(new zyunzyosettei());
+        }
+
+        // ⑤段テスト ボタンが押されたとき
+        private void button5_Click(object sender, RoutedEventArgs e)
+        {
+            Module1.keishiki = 4; // 段テスト
+
+            // スタートボタンページへ遷移
+            NavigationService.Navigate(new SecondPage());
         }
     }
 }

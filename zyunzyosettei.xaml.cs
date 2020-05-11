@@ -32,9 +32,37 @@ namespace KUKUTAN
             }
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        //private void Button_Click(object sender, RoutedEventArgs e)
+        //{
+        //    Module1.zyunzyo = 0; // じゅんばん
+
+        //    NavigationService.Navigate(new SecondPage());            
+        //}
+
+        // じゅんばん ボタンが押されたとき
+        private void button1_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new SecondPage());            
+            Module1.zyunzyo = 0; // じゅんばん
+
+            NavigationService.Navigate(new SecondPage());
+        }
+
+        // ぎゃくじゅん ボタンが押されたとき
+        private void button2_Click(object sender, RoutedEventArgs e)
+        {
+            Module1.zyunzyo = 1; // ぎゃくじゅん
+
+            NavigationService.Navigate(new SecondPage());
+
+        }
+
+        // ランダム ボタンが押されたとき
+        private void button3_Click(object sender, RoutedEventArgs e)
+        {
+            Module1.zyunzyo = 2; // ランダム
+
+            NavigationService.Navigate(new SecondPage());
+
         }
     }
 }
