@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:KUKUTAN"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Background="#FF8080FF">
+      Background="#FF8080FF" Loaded="Page_Loaded">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="1*" />
@@ -21,17 +21,17 @@
         </Grid.RowDefinitions>
         <Border Background="White" Grid.Row="1">
             <Viewbox OpacityMask="Black">
-                <Label HorizontalContentAlignment="Center" Content="①れんしゅう　（もじ＋すうじ＋こたえ）" Foreground="Navy" VerticalContentAlignment="Center" Padding="0" FontFamily="MS UI Gothic"/>
+                <Label x:Name="keishiki_label" HorizontalContentAlignment="Center" Content="①れんしゅう　（もじ＋すうじ＋こたえ）" Foreground="Navy" VerticalContentAlignment="Center" Padding="0" FontFamily="MS UI Gothic"/>
             </Viewbox>
         </Border>
         <Border Background="White" Grid.Row="3">
             <Viewbox OpacityMask="Black">
-                <Label HorizontalContentAlignment="Center" Content="９の段" VerticalContentAlignment="Center" Padding="0" FontFamily="MS UI Gothic"/>
+                <Label x:Name="dan_label" HorizontalContentAlignment="Center" Content="９の段" VerticalContentAlignment="Center" Padding="0" FontFamily="MS UI Gothic"/>
             </Viewbox>
         </Border>
         <Border Background="White" Grid.Row="5">
             <Viewbox OpacityMask="Black">
-                <Label HorizontalContentAlignment="Center" Content="順番" VerticalContentAlignment="Center" Padding="0" FontFamily="MS UI Gothic"/>
+                <Label x:Name="zyunzyo_label" HorizontalContentAlignment="Center" Content="順番" VerticalContentAlignment="Center" Padding="0" FontFamily="MS UI Gothic"/>
             </Viewbox>
         </Border>
             <Grid Grid.Row="7">
@@ -46,7 +46,7 @@
                 <Button Margin="0" Content="スタート" Click="start_Click" Width="40"/>
             </Viewbox>
             <Viewbox Grid.Column="3" Grid.Row="0">
-                <Button Margin="5,5,5,0" Content="もどる" Click="backbutton_Click"/>
+                <Button x:Name="backbutton" Margin="5,5,5,0" Content="もどる" Click="backbutton_Click"/>
             </Viewbox>
         </Grid>
     </Grid>

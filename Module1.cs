@@ -8,8 +8,8 @@
 
         public static short mojisuu = 0; // 入力もじ数をカウント
 
-        [System.Runtime.InteropServices.DllImport("winmm.dll")]
-        public static extern int sndPlaySound(string lpszSoundName, int uFlags); // VBのバージョンが4.0以上の時
+        //[System.Runtime.InteropServices.DllImport("winmm.dll")]
+        //public static extern int sndPlaySound(string lpszSoundName, int uFlags); // VBのバージョンが4.0以上の時
 
         // Public FontType As Short 'フォント種類　0:そろふぉんと、1:ゴシック
 
@@ -39,7 +39,7 @@
         public static bool review_mode = false; // ふくしゅうモード
 
         public static short dan = 0; // 段：１～９ 10はランダム
-        public static short zyunzyo = 0; // 出題じゅんじょ　0:じゅんばん、1:ぎゃくじゅん　,2;ランダム
+        public static short zyunzyo = 0; // 出題じゅんじょ　0:じゅんばん、1:ぎゃくじゅん　,2:ランダム
         public static string[,] kakeyomikata = new string[10, 10]; // かけざんの読み方
         public static string[,] kakeyomikatakotae = new string[10, 10]; // かけざんの読み方の答
         public static short[,] challengezyunban = new short[10, 10]; // challengeの際のじゅんばん
@@ -54,7 +54,7 @@
         public static bool[] suuzikakunin = new bool[10]; // 使用したすうじを確認
         public static object[] matigaihou = new object[244];
         public static object[] matigaimi = new object[244];
-        public static object matigaicount = null;
+        public static short matigaicount = 0;
         public static short hyouzicount = 0; // ふくしゅうで出題する問題を選択
         public static bool[,] siyousuuzikakunin = new bool[10, 10]; // 出題したすうじを確認
         public static bool anaumekakunin = false; // あなうめの場合ふくしゅう機能が変更になるため確認する

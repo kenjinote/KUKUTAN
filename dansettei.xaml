@@ -38,35 +38,35 @@
             </Grid.RowDefinitions>
 
             <Viewbox Grid.Column="1" Grid.Row="0">
-                <Button Margin="2" Content="1の段" Width="64" Click="Button_Click"/>
+                <Button x:Name="button1" Margin="2" Content="1の段" Width="64" Click="button1_Click"/>
             </Viewbox>
             <Viewbox Grid.Column="1" Grid.Row="1">
-                <Button  Margin="2" Content="2の段" Width="64" Click="Button_Click"/>
+                <Button x:Name="button2" Margin="2" Content="2の段" Width="64" Click="button2_Click"/>
             </Viewbox>
             <Viewbox Grid.Column="1" Grid.Row="2">
-                <Button  Margin="2" Content="3の段" Width="64" Click="Button_Click"/>
+                <Button x:Name="button3"  Margin="2" Content="3の段" Width="64" Click="button3_Click"/>
             </Viewbox>
             <Viewbox Grid.Column="1" Grid.Row="3">
-                <Button  Margin="2" Content="4の段" Width="64" Click="Button_Click"/>
+                <Button x:Name="button4"  Margin="2" Content="4の段" Width="64" Click="button4_Click"/>
             </Viewbox>
             <Viewbox Grid.Column="1" Grid.Row="4">
-                <Button  Margin="2" Content="5の段" Width="64" Click="Button_Click"/>
+                <Button x:Name="button5"  Margin="2" Content="5の段" Width="64" Click="button5_Click"/>
             </Viewbox>
 
             <Viewbox Grid.Column="3" Grid.Row="0">
-                <Button Margin="2" Content="6の段" Width="64" Click="Button_Click"/>
+                <Button x:Name="button6" Margin="2" Content="6の段" Width="64" Click="button6_Click"/>
             </Viewbox>
             <Viewbox Grid.Column="3" Grid.Row="1">
-                <Button Margin="2" Content="7の段" Width="64" Click="Button_Click"/>
+                <Button x:Name="button7" Margin="2" Content="7の段" Width="64" Click="button7_Click"/>
             </Viewbox>
             <Viewbox Grid.Column="3" Grid.Row="2">
-                <Button Margin="2" Content="8の段" Width="64" Click="Button_Click"/>
+                <Button x:Name="button8" Margin="2" Content="8の段" Width="64" Click="button8_Click"/>
             </Viewbox>
             <Viewbox Grid.Column="3" Grid.Row="3">
-                <Button Margin="2" Content="9の段" Width="64" Click="Button_Click"/>
+                <Button x:Name="button9" Margin="2" Content="9の段" Width="64" Click="button9_Click"/>
             </Viewbox>
             <Viewbox Grid.Column="3" Grid.Row="4">
-                <Button Margin="2" Content="ランダム" Width="64" Click="Button_Click"/>
+                <Button x:Name="button_random" Margin="2" Content="ランダム" Width="64" Click="button_random_Click"/>
             </Viewbox>
 
             <Viewbox Grid.Column="3" Grid.Row="5" HorizontalAlignment="Right">

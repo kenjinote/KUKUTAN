@@ -32,12 +32,17 @@ namespace KUKUTAN
 
         private void anaumebutton_Click(object sender, RoutedEventArgs e)
         {
+            Module1.keishiki = 6; // ８１問テストチャレンジ
+            Module1.zyunzyo = 2; // 穴埋め問題の順序は常にランダムに設定
+
             // 段設定に遷移
             NavigationService.Navigate(new dansettei());            
         }
 
         private void challenge81button_Click(object sender, RoutedEventArgs e)
         {
+            Module1.keishiki = 5; // ８１問テストチャレンジ
+
             // チャレンジ設定に遷移
             NavigationService.Navigate(new callengesettei());            
         }

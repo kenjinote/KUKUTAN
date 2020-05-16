@@ -32,18 +32,12 @@ namespace KUKUTAN
             }
         }
 
-        //private void Button_Click(object sender, RoutedEventArgs e)
-        //{
-        //    Module1.zyunzyo = 0; // じゅんばん
-
-        //    NavigationService.Navigate(new SecondPage());            
-        //}
-
         // じゅんばん ボタンが押されたとき
         private void button1_Click(object sender, RoutedEventArgs e)
         {
             Module1.zyunzyo = 0; // じゅんばん
 
+            // スタートボタン画面へ遷移
             NavigationService.Navigate(new SecondPage());
         }
 
@@ -52,8 +46,8 @@ namespace KUKUTAN
         {
             Module1.zyunzyo = 1; // ぎゃくじゅん
 
+            // スタートボタン画面へ遷移
             NavigationService.Navigate(new SecondPage());
-
         }
 
         // ランダム ボタンが押されたとき
@@ -61,8 +55,8 @@ namespace KUKUTAN
         {
             Module1.zyunzyo = 2; // ランダム
 
+            // スタートボタン画面へ遷移
             NavigationService.Navigate(new SecondPage());
-
         }
     }
 }
