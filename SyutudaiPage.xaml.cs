@@ -39,9 +39,7 @@ namespace KUKUTAN
         {
             TimeCount++;
 
-            timetext.Text = "";
-            timetext.Inlines.Add(new Run(TimeCount.ToString()) { FontSize = 25 });
-            timetext.Inlines.Add("秒");
+            Label3.Content = TimeCount.ToString();
 
             //＜１分経過したら終了する＞
             if (TimeCount == LimitSec)
@@ -64,30 +62,30 @@ namespace KUKUTAN
                 )
             {
                 // 未入力のセルに0を入力しようとしたときは入力を無視する
-                if ((e.Key == Key.D0 || e.Key == Key.NumPad0) && text3.Content.ToString().Length == 0)
+                if ((e.Key == Key.D0 || e.Key == Key.NumPad0) && Text3.Content.ToString().Length == 0)
                 {
                     return;
                 }
                 // 2桁未満のときのみ数値入力を許容する
-                if (text3.Content.ToString().Length < 2)
+                if (Text3.Content.ToString().Length < 2)
                 {
                     string keyCodeString = e.Key.ToString();
-                    text3.Content += keyCodeString[keyCodeString.Length - 1].ToString();
+                    Text3.Content += keyCodeString[keyCodeString.Length - 1].ToString();
                 }
             }
             // スペースキー、マイナスキー、バックスペースキー、デリートキーを入力した場合は、セルの入力をクリアする
             else if (e.Key == Key.Space || e.Key == Key.OemMinus || e.Key == Key.Subtract || e.Key == Key.Back || e.Key == Key.Delete)
             {
-                text3.Content = "";
+                Text3.Content = "";
             }
             // エンターキーを入力した場合は
             else if (e.Key == Key.Enter)
             {
                 // 数字未入力の場合は何もしない
-                if (text3.Content.ToString() == "") return;
+                if (Text3.Content.ToString() == "") return;
 
                 // 入力値が正解の場合
-                if (text3.correct)
+                if (Text3.correct)
                 {
                     // 正解の音を鳴らす
                     new SoundPlayer(Properties.Resources.CBC).Play();
@@ -100,7 +98,7 @@ namespace KUKUTAN
                 else
                 {
                     new SoundPlayer(Properties.Resources.BUBU).Play();
-                    text3.Content = "";
+                    Text3.Content = "";
                 }
             }
         }
@@ -110,16 +108,22 @@ namespace KUKUTAN
             window = Window.GetWindow(this);
             window.KeyDown += HandleKeyDown;
 
-        //Label3.Text = CStr(0) '残り時間
+            Label3.Content = "0"; // 残り時間
             Module1.mondai_count = 0;
             Module1.collect_count = 0; // 正解数
             Module1.mistake_count = 0; // 不正解数
             Module1.matigaikaisu = 0;
 
-            switch(Module1.keishiki)
+            Text3.Background = new SolidColorBrush(Colors.White);
+
+            switch (Module1.keishiki)
             {
                 case 0: // もじ+すうじ＋こたえ
-                    Label5.Visibility = Visibility.Visible; // すうじ
+                    Label5.Visibility = Visibility.Visible;
+                    Label6.Visibility = Visibility.Visible;
+                    Label7.Visibility = Visibility.Visible;
+                    Label8.Visibility = Visibility.Visible;
+                    Label9.Visibility = Visibility.Hidden;
                     break;
                 case 1: // もじ＋すうじ
                     break;
