@@ -5,13 +5,13 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Background="#FF8080FF">
+      Background="#FF8080FF" Loaded="Page_Loaded">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="5*" />
             <ColumnDefinition Width="20*" />
             <ColumnDefinition Width="5*" />
-        </Grid.ColumnDefinitions>        
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="2*" />
             <RowDefinition Height="8*" />
@@ -21,18 +21,18 @@
             <RowDefinition Height="5*" />
             <RowDefinition Height="1*" />
             <RowDefinition Height="20*" />
-            <RowDefinition Height="5*" />
-            <RowDefinition Height="8*" />
-            <RowDefinition Height="5*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="14*" />
+            <RowDefinition Height="2*" />
         </Grid.RowDefinitions>
         <Border Background="White" Grid.Row="1" Grid.Column="1">
             <Viewbox>
-                <Label Content="けっか" Padding="0" FontFamily="MS UI Gothic"/>
+                <Label x:Name="Label1" Content="けっか" Padding="0" FontFamily="MS UI Gothic"/>
             </Viewbox>
         </Border>
         <Border Background="White" Grid.Row="3" Grid.Column="1">
             <Viewbox>
-                <Label Content="①れんしゅう　（もじ＋すうじ＋こたえ）" Padding="0" FontFamily="MS UI Gothic"/>
+                <Label x:Name="Label5" Content="①れんしゅう　（もじ＋すうじ＋こたえ）" Padding="0" FontFamily="MS UI Gothic"/>
             </Viewbox>
         </Border>
 
@@ -44,12 +44,12 @@
             </Grid.ColumnDefinitions>
             <Border Background="White" Grid.Column="0">
                 <Viewbox>
-                    <Label Content="1の段" Padding="0" FontFamily="MS UI Gothic"/>
+                    <Label x:Name="Label9" Content="1の段" Padding="0" FontFamily="MS UI Gothic"/>
                 </Viewbox>
             </Border>
             <Border Background="White" Grid.Column="2">
                 <Viewbox>
-                    <Label Content="じゅんじょ：じゅんばん" Padding="0" FontFamily="MS UI Gothic"/>
+                    <Label x:Name="Label10" Content="じゅんじょ：じゅんばん" Padding="0" FontFamily="MS UI Gothic"/>
                 </Viewbox>
             </Border>
         </Grid>
@@ -72,16 +72,16 @@
                     <RowDefinition Height="5*" />
                 </Grid.RowDefinitions>
                 <Viewbox Grid.Row="0" HorizontalAlignment="Left" Margin="5,0,0,0">
-                    <Label Content="もくひょうせいかいすう" Padding="0" FontFamily="MS UI Gothic"/>
+                    <Label x:Name="Label16" Content="もくひょうせいかいすう" Padding="0" FontFamily="MS UI Gothic"/>
                 </Viewbox>
                 <Viewbox Grid.Row="2" HorizontalAlignment="Right">
-                    <Label Content="27問" Padding="0" FontFamily="MS UI Gothic"/>
+                    <Label x:Name="Label11" Content="27問" Padding="0" FontFamily="MS UI Gothic"/>
                 </Viewbox>
                 <Viewbox Grid.Row="4" HorizontalAlignment="Left" Margin="5,0,0,0">
-                    <Label Content="かかったじかん" Padding="0" FontFamily="MS UI Gothic"/>
+                    <Label x:Name="Label4" Content="かかったじかん" Padding="0" FontFamily="MS UI Gothic"/>
                 </Viewbox>
                 <Viewbox Grid.Row="6" HorizontalAlignment="Right">
-                    <Label Content="135秒" Padding="0" FontFamily="MS UI Gothic" Foreground="Lime"/>
+                    <Label x:Name="Label3" Content="135秒" Padding="0" FontFamily="MS UI Gothic" Foreground="Green"/>
                 </Viewbox>
             </Grid>
             <Grid Grid.Column="2" Background="White">
@@ -100,41 +100,57 @@
                     <ColumnDefinition Width="1*" />
                 </Grid.ColumnDefinitions>
                 <Viewbox Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Bottom">
-                    <Label Content="せいかいすう" Padding="0" FontFamily="MS UI Gothic"/>
+                    <Label x:Name="Label2" Content="せいかいすう" Padding="0" FontFamily="MS UI Gothic"/>
                 </Viewbox>
                 <Viewbox Grid.Row="5" HorizontalAlignment="Right" VerticalAlignment="Bottom">
-                    <Label Content="まちがえたかず" Padding="0" FontFamily="MS UI Gothic"/>
+                    <Label x:Name="Label17" Content="まちがえたかず" Padding="0" FontFamily="MS UI Gothic"/>
                 </Viewbox>
                 <Viewbox Grid.Column="1" Grid.Row="1" Grid.RowSpan="2">
-                    <Label Content="7" Padding="0" FontFamily="MS UI Gothic" Foreground="Red"/>
+                    <Label x:Name="Label6" Content="7" Padding="0" FontFamily="MS UI Gothic" Foreground="Red"/>
                 </Viewbox>
                 <Viewbox Grid.Column="1" Grid.Row="4" Grid.RowSpan="2">
-                    <Label Content="7" Padding="0" FontFamily="MS UI Gothic" Foreground="#FF80FFFF"/>
+                    <Label x:Name="Label18" Content="7" Padding="0" FontFamily="MS UI Gothic" Foreground="#FF80FFFF"/>
                 </Viewbox>
                 <Viewbox Grid.Column="2" Grid.Row="2" Margin="0,0,0,5">
-                    <Label Content="問" Padding="0" FontFamily="MS UI Gothic"/>
+                    <Label x:Name="Label8" Content="問" Padding="0" FontFamily="MS UI Gothic"/>
                 </Viewbox>
                 <Viewbox Grid.Column="2" Grid.Row="5" Margin="0,0,0,5">
-                    <Label Content="問" Padding="0" FontFamily="MS UI Gothic"/>
+                    <Label x:Name="Label19" Content="問" Padding="0" FontFamily="MS UI Gothic"/>
                 </Viewbox>
             </Grid>
 
         </Grid>
 
 
-            <Grid Grid.Row="9" Grid.Column="1">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="4*" />
-                    <ColumnDefinition Width="1*" />
-                    <ColumnDefinition Width="4*" />
-                </Grid.ColumnDefinitions>
-                <Border Background="White" Grid.Column="0" Grid.Row="0">
-                <Viewbox>
-                    <Label  Margin="0" Content="がんばろう" HorizontalContentAlignment="Left" FontFamily="MS UI Gothic" FontSize="72"/>
-                </Viewbox>
-                </Border>
-            <Viewbox Grid.Column="3" Grid.Row="0">
-                <Button  Margin="2,2,2,0" Content="もどる" HorizontalContentAlignment="Left" Click="backbutton_Click" FontFamily="MS UI Gothic"/>
+        <Grid Grid.Row="9" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="4*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="4*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*" />
+                <RowDefinition Height="5*" />
+                <RowDefinition Height="2*" />
+            </Grid.RowDefinitions>
+
+            <Viewbox Grid.Column="0" Grid.Row="0" Grid.RowSpan="3">
+                <Label x:Name="Label13" Margin="0" Content="合格" FontFamily="MS UI Gothic" FontSize="72" Background="White" Foreground="Red"/>
+            </Viewbox>
+
+            <Viewbox Grid.Column="0" Grid.Row="1">
+                <Label x:Name="Label14"  Margin="0" Content="あとすこし！" FontFamily="MS UI Gothic" FontSize="72" Background="White"/>
+            </Viewbox>
+
+            <Viewbox Grid.Column="0" Grid.Row="1">
+                <Label x:Name="Label15"  Margin="0" Content="がんばろう" FontFamily="MS UI Gothic" FontSize="72" Background="White"/>
+            </Viewbox>
+
+            <Viewbox Grid.Column="3" Grid.Row="1">
+                <Button x:Name="Command2" Content="もどる" FontFamily="MS UI Gothic" Click="Command2_Click"/>
+            </Viewbox>
+            <Viewbox Grid.Column="3" Grid.Row="1">
+                <Button x:Name="Command3" Content="ふくしゅう" FontFamily="MS UI Gothic" Click="Command3_Click"/>
             </Viewbox>
         </Grid>
     </Grid>

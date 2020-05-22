@@ -28,6 +28,9 @@ namespace KUKUTAN
             NavigationCommands.BrowseBack.InputGestures.Clear();
             NavigationCommands.BrowseForward.InputGestures.Clear();
 
+            // 掛け算の読み方を取得する
+            kakezanyomikata.kukutanyomi();
+
             // コース選択ページに遷移
             NavigationService.Navigate(new TopPage());
         }

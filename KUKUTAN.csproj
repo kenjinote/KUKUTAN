@@ -73,10 +73,13 @@
     <Compile Include="input.xaml.cs">
       <DependentUpon>input.xaml</DependentUpon>
     </Compile>
+    <Compile Include="kakezanyomikata.cs" />
     <Compile Include="KekkaPage.xaml.cs">
       <DependentUpon>KekkaPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Module1.cs" />
+    <Compile Include="SakumonModule.cs" />
+    <Compile Include="SaveModule.cs" />
     <Compile Include="SecondPage.xaml.cs">
       <DependentUpon>SecondPage.xaml</DependentUpon>
     </Compile>

@@ -47,13 +47,13 @@
         public static bool[,] huseikaidankakunin = new bool[10, 10]; // 不正解の段を確認
         public static short SEC = 0; // 出題制限時間
         public static short syutsudaimondaisu = 0; // 出題問題数設定
-        public static object[] hukusyudatami = new object[21];
+        public static short[] hukusyudatami = new short[21];
         public static short[] hukusyudatahou = new short[21]; // ふくしゅうする段の実と法を保存する
         public static short sokudo = 0; // 0:ゆっくり 1:ふつう 2:オリジナル
         public static short matigaikaisu = 0; // 問題を間違えた回数を記録
         public static bool[] suuzikakunin = new bool[10]; // 使用したすうじを確認
-        public static object[] matigaihou = new object[244];
-        public static object[] matigaimi = new object[244];
+        public static short[] matigaihou = new short[244];
+        public static short[] matigaimi = new short[244];
         public static short matigaicount = 0;
         public static short hyouzicount = 0; // ふくしゅうで出題する問題を選択
         public static bool[,] siyousuuzikakunin = new bool[10, 10]; // 出題したすうじを確認

@@ -83,7 +83,7 @@
                 </Grid.ColumnDefinitions>
                 <local:input x:Name="Text1" Grid.Column="0"/>
                 <Viewbox Grid.Column="1">
-                    <Label x:Name="Label7" Grid.Column="1" Grid.Row="2" Content="×" Foreground="Yellow" FontFamily="MS UI Gothic" FontSize="72"/>
+                    <Label x:Name="Label7" Grid.Column="1" Grid.Row="2" Content="×" Foreground="Yellow" FontFamily="MS UI Gothic" FontSize="72" Padding="0"/>
                 </Viewbox>
                 <local:input x:Name="Text2" Grid.Column="2"/>
             </Grid>
@@ -106,7 +106,10 @@
             </Grid>
 
             <Viewbox Grid.Column="3" Grid.Row="3" Margin="0,50,0,10">
-                <Button x:Name="stop" Content="やめる" IsCancel="True" Click="stop_Click" />
+                <Button x:Name="Command1" Content="やめる" IsCancel="True" Click="Command1_Click"/>
+            </Viewbox>
+            <Viewbox Grid.Column="3" Grid.Row="3" Margin="0,50,0,10">
+                <Button x:Name="Command2" Content="ふくしゅうをおわる" IsCancel="True" Click="Command2_Click"/>
             </Viewbox>
         </Grid>
     </Grid>
