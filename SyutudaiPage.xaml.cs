@@ -107,10 +107,10 @@ namespace KUKUTAN
                     }
                     else
                     {
-                        Module1.collect_count = (short)(Module1.collect_count + 1); // 正解数をカウントアップ
+                        Module1.collect_count++; // 正解数をカウントアップ
                     }
 
-                    Module1.mondai_count = (short)(Module1.mondai_count + 1); // 出題数をカウントアップ
+                    Module1.mondai_count++; // 出題数をカウントアップ
 
                     if (Module1.mondai_count == (short)(Module1.syutsudaimondaisu + 1))　// 出題数が目標に達したら終了
                     {
