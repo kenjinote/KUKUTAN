@@ -156,7 +156,7 @@ namespace KUKUTAN
                     Module1.SEC = 999;
                 }
             }
-            else if (Module1.x == 7)
+            else if (Module1.keishiki == 7)
             {
                 Module1.syutsudaimondaisu = 81;
                 Module1.SEC = 600;
